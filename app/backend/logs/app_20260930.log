@@ -1,0 +1,97 @@
+2026-09-30 04:53:49,362 - main - INFO - === Logging system initialized ===
+2026-09-30 04:53:49,363 - main - INFO - Log file: logs/app_20260930.log
+2026-09-30 04:53:49,363 - main - INFO - Log level: DEBUG
+2026-09-30 04:53:49,363 - main - INFO - Log date: 20260930
+2026-09-30 04:53:49,599 - main - INFO - Included router: routers.aihub.router
+2026-09-30 04:53:50,553 - main - INFO - Included router: routers.auth.router
+2026-09-30 04:53:50,612 - main - INFO - Included router: routers.health.router
+2026-09-30 04:53:50,665 - main - INFO - Included router: routers.settings.router
+2026-09-30 04:53:50,763 - main - INFO - Included router: routers.storage.router
+2026-09-30 04:53:50,905 - main - INFO - Included router: routers.user.router
+2026-09-30 04:53:51,004 - main - INFO - Included router: routers.vibe.router
+2026-09-30 04:53:51,005 - main - INFO - === Application startup initiated ===
+2026-09-30 04:53:51,005 - main - INFO - === Application startup completed successfully ===
+2026-09-30 04:56:28,293 - core.config - DEBUG - Read dynamic attribute database_url from environment variable DATABASE_URL
+2026-09-30 04:56:28,295 - core.database - INFO - Using QueuePool for non-Lambda environment (pool_pre_ping=True, pool_size=5, max_overflow=5, pool_recycle=280s, pool_timeout=30s, pool_use_lifo=True)
+2026-09-30 04:56:28,414 - core.database - INFO - Database connection initialized successfully
+2026-09-30 04:56:28,686 - routers.auth - INFO - [token/exchange] Received platform token exchange request
+2026-09-30 04:56:28,686 - core.config - DEBUG - Read dynamic attribute oidc_issuer_url from environment variable OIDC_ISSUER_URL
+2026-09-30 04:56:28,686 - routers.auth - DEBUG - [token/exchange] Verifying token with issuer: https://auth.atoms.dev/api/v1/oidc/platform/tokens/verify
+2026-09-30 04:56:28,893 - httpcore.connection - DEBUG - connect_tcp.started host='auth.atoms.dev' port=443 local_address=None timeout=5.0 socket_options=None
+2026-09-30 04:56:29,015 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f4ef57a84f0>
+2026-09-30 04:56:29,015 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7f4ef55f7ac0> server_hostname='auth.atoms.dev' timeout=5.0
+2026-09-30 04:56:29,023 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f4ef57a8340>
+2026-09-30 04:56:29,023 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-09-30 04:56:29,024 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-09-30 04:56:29,024 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-09-30 04:56:29,024 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-09-30 04:56:29,024 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-09-30 04:56:29,053 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 30 Sep 2026 11:56:29 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'a4330b696914f79a-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Server', b'cloudflare'), (b'x-mgx-request-id', b'dd38db9867645265c329a80940986a04'), (b'x-request-id', b'dd38db9867645265c329a80940986a04'), (b'x-response-time', b'0.002s'), (b'Content-Encoding', b'gzip')])
+2026-09-30 04:56:29,054 - httpx - INFO - HTTP Request: POST https://auth.atoms.dev/api/v1/oidc/platform/tokens/verify "HTTP/1.1 200 OK"
+2026-09-30 04:56:29,054 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-09-30 04:56:29,055 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-09-30 04:56:29,055 - httpcore.http11 - DEBUG - response_closed.started
+2026-09-30 04:56:29,055 - httpcore.http11 - DEBUG - response_closed.complete
+2026-09-30 04:56:29,055 - httpcore.connection - DEBUG - close.started
+2026-09-30 04:56:29,056 - httpcore.connection - DEBUG - close.complete
+2026-09-30 04:56:29,056 - routers.auth - DEBUG - [token/exchange] Issuer response status: 200
+2026-09-30 04:56:29,056 - routers.auth - DEBUG - [token/exchange] Issuer response body: {'success': True, 'data': {'email': '2926520961@qq.com', 'exp': 1793360374, 'iat': 1790768374, 'pv': 0, 'user_id': 1616653}, 'message': 'Platform token verified', 'code': 0, 'timestamp': '2026-09-30T19:56:29.048925'}
+2026-09-30 04:56:29,056 - routers.auth - INFO - [token/exchange] Token verified, platform_user_id=1616653, email=2926520961@qq.com
+2026-09-30 04:56:29,056 - core.config - DEBUG - Read dynamic attribute admin_user_id from environment variable ADMIN_USER_ID
+2026-09-30 04:56:29,056 - routers.auth - INFO - [token/exchange] User verified: platform_user_id=1616653, role=admin
+2026-09-30 04:56:29,058 - routers.auth - DEBUG - [token/exchange] User object for token issuance: id=1616653, email=2926520961@qq.com, role=admin
+2026-09-30 04:56:29,058 - core.config - DEBUG - Read dynamic attribute jwt_expire_minutes from environment variable JWT_EXPIRE_MINUTES
+2026-09-30 04:56:29,059 - core.config - DEBUG - Read dynamic attribute jwt_secret_key from environment variable JWT_SECRET_KEY
+2026-09-30 04:56:29,140 - core.config - DEBUG - Read dynamic attribute jwt_algorithm from environment variable JWT_ALGORITHM
+2026-09-30 04:56:29,146 - routers.auth - INFO - [token/exchange] Token issued successfully for user_id=1616653, expires_at=2026-10-30 11:56:29.059074+00:00
+2026-09-30 04:56:29,873 - routers.auth - INFO - [token/exchange] Received platform token exchange request
+2026-09-30 04:56:29,873 - routers.auth - DEBUG - [token/exchange] Verifying token with issuer: https://auth.atoms.dev/api/v1/oidc/platform/tokens/verify
+2026-09-30 04:56:29,896 - httpcore.connection - DEBUG - connect_tcp.started host='auth.atoms.dev' port=443 local_address=None timeout=5.0 socket_options=None
+2026-09-30 04:56:29,910 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f4ef4f59330>
+2026-09-30 04:56:29,910 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7f4ef4fe4940> server_hostname='auth.atoms.dev' timeout=5.0
+2026-09-30 04:56:29,920 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f4ef580f4c0>
+2026-09-30 04:56:29,921 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2026-09-30 04:56:29,921 - httpcore.http11 - DEBUG - send_request_headers.complete
+2026-09-30 04:56:29,922 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2026-09-30 04:56:29,922 - httpcore.http11 - DEBUG - send_request_body.complete
+2026-09-30 04:56:29,922 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2026-09-30 04:56:29,948 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Wed, 30 Sep 2026 11:56:29 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'a4330b6f0e4aa9be-LAX'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Server', b'cloudflare'), (b'x-mgx-request-id', b'ce4a1c36fe84e87163f135ef0c2a4a28'), (b'x-request-id', b'ce4a1c36fe84e87163f135ef0c2a4a28'), (b'x-response-time', b'0.001s'), (b'Content-Encoding', b'gzip')])
+2026-09-30 04:56:29,949 - httpx - INFO - HTTP Request: POST https://auth.atoms.dev/api/v1/oidc/platform/tokens/verify "HTTP/1.1 200 OK"
+2026-09-30 04:56:29,949 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2026-09-30 04:56:29,950 - httpcore.http11 - DEBUG - receive_response_body.complete
+2026-09-30 04:56:29,950 - httpcore.http11 - DEBUG - response_closed.started
+2026-09-30 04:56:29,950 - httpcore.http11 - DEBUG - response_closed.complete
+2026-09-30 04:56:29,951 - httpcore.connection - DEBUG - close.started
+2026-09-30 04:56:29,951 - httpcore.connection - DEBUG - close.complete
+2026-09-30 04:56:29,951 - routers.auth - DEBUG - [token/exchange] Issuer response status: 200
+2026-09-30 04:56:29,951 - routers.auth - DEBUG - [token/exchange] Issuer response body: {'success': True, 'data': {'email': '2926520961@qq.com', 'exp': 1793360374, 'iat': 1790768374, 'pv': 0, 'user_id': 1616653}, 'message': 'Platform token verified', 'code': 0, 'timestamp': '2026-09-30T19:56:29.944545'}
+2026-09-30 04:56:29,951 - routers.auth - INFO - [token/exchange] Token verified, platform_user_id=1616653, email=2926520961@qq.com
+2026-09-30 04:56:29,951 - routers.auth - INFO - [token/exchange] User verified: platform_user_id=1616653, role=admin
+2026-09-30 04:56:29,952 - routers.auth - DEBUG - [token/exchange] User object for token issuance: id=1616653, email=2926520961@qq.com, role=admin
+2026-09-30 04:56:29,952 - routers.auth - INFO - [token/exchange] Token issued successfully for user_id=1616653, expires_at=2026-10-30 11:56:29.952162+00:00
+2026-09-30 04:57:13,593 - main - INFO - === Logging system initialized ===
+2026-09-30 04:57:13,593 - main - INFO - Log file: logs/app_20260930.log
+2026-09-30 04:57:13,593 - main - INFO - Log level: DEBUG
+2026-09-30 04:57:13,593 - main - INFO - Log date: 20260930
+2026-09-30 04:57:13,984 - main - INFO - Included router: routers.aihub.router
+2026-09-30 04:57:15,946 - main - INFO - Included router: routers.auth.router
+2026-09-30 04:57:15,950 - main - INFO - Included router: routers.health.router
+2026-09-30 04:57:15,984 - main - INFO - Included router: routers.settings.router
+2026-09-30 04:57:16,012 - main - INFO - Included router: routers.storage.router
+2026-09-30 04:57:16,087 - main - INFO - Included router: routers.user.router
+2026-09-30 04:57:16,106 - main - INFO - Included router: routers.vibe.router
+2026-09-30 04:57:16,108 - main - INFO - === Application startup initiated ===
+2026-09-30 04:57:16,108 - main - INFO - === Application startup completed successfully ===
+2026-09-30 04:59:29,075 - main - INFO - === Logging system initialized ===
+2026-09-30 04:59:29,075 - main - INFO - Log file: logs/app_20260930.log
+2026-09-30 04:59:29,076 - main - INFO - Log level: DEBUG
+2026-09-30 04:59:29,076 - main - INFO - Log date: 20260930
+2026-09-30 04:59:29,165 - main - INFO - Included router: routers.aihub.router
+2026-09-30 04:59:29,817 - main - INFO - Included router: routers.auth.router
+2026-09-30 04:59:29,819 - main - INFO - Included router: routers.health.router
+2026-09-30 04:59:29,828 - main - INFO - Included router: routers.settings.router
+2026-09-30 04:59:29,846 - main - INFO - Included router: routers.storage.router
+2026-09-30 04:59:29,861 - main - INFO - Included router: routers.user.router
+2026-09-30 04:59:29,876 - main - INFO - Included router: routers.vibe.router
+2026-09-30 04:59:29,877 - main - INFO - === Application startup initiated ===
+2026-09-30 04:59:29,877 - main - INFO - === Application startup completed successfully ===

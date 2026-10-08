@@ -1,0 +1,13 @@
+2026-10-07 02:07:19,087 - main - INFO - === Logging system initialized ===
+2026-10-07 02:07:19,087 - main - INFO - Log file: logs/app_20261007.log
+2026-10-07 02:07:19,088 - main - INFO - Log level: DEBUG
+2026-10-07 02:07:19,088 - main - INFO - Log date: 20261007
+2026-10-07 02:07:19,343 - main - INFO - Included router: routers.aihub.router
+2026-10-07 02:07:20,277 - main - INFO - Included router: routers.auth.router
+2026-10-07 02:07:20,333 - main - INFO - Included router: routers.health.router
+2026-10-07 02:07:20,360 - main - INFO - Included router: routers.settings.router
+2026-10-07 02:07:20,437 - main - INFO - Included router: routers.storage.router
+2026-10-07 02:07:20,594 - main - INFO - Included router: routers.user.router
+2026-10-07 02:07:20,759 - main - INFO - Included router: routers.vibe.router
+2026-10-07 02:07:20,761 - main - INFO - === Application startup initiated ===
+2026-10-07 02:07:20,761 - main - INFO - === Application startup completed successfully ===
